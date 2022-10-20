@@ -21,11 +21,12 @@ def get_sqrt_price(price):
 
 def get_expected_sqrt_price(volatility):
     P = 1000
-    R = []
+    SQRT_PRICES_AFTER_A_YEAR = []
     for k in range(P):
         p = get_p(k)
-        R.append(get_sqrt_price(get_price(norm.ppf(p), volatility)))
-    expected_sqrt_price = st.mean(R)
+        SQRT_PRICES_AFTER_A_YEAR.append(
+            get_sqrt_price(get_price(norm.ppf(p), volatility)))
+    expected_sqrt_price = st.mean(SQRT_PRICES_AFTER_A_YEAR)
     return expected_sqrt_price
 
 
