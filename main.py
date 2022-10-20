@@ -51,7 +51,7 @@ def show_chart():
     plt.ylabel("price after a year")
     plt.legend()
 
-    plt.savefig("chart.png")
+    plt.savefig("sqrt.png")
     plt.show()
 
 
